@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="게임 개발 세부 직무의 역할, 기술, 지식과 협업 관계를 탐색하는 정적 지식 지도" />
+  <title>게임 개발 직무 지식 지도</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./index.html">Game Career Map</a>
+  <nav aria-label="주요 메뉴">
+    <a class="active" href="./index.html">직무</a>
+    <a href="./graph.html">협업 그래프</a>
+  </nav>
+</header>
+<main class="container">
+  <section class="hero">
+    <p class="eyebrow">GAME DEVELOPMENT ROLE KNOWLEDGE MAP</p>
+    <h1>게임 개발 직무를<br/>역할·기술·지식·협업으로 연결해서 보기</h1>
+    <p>세부 직무가 무엇을 하는지, 어떤 기술과 지식을 다루는지, 다른 직무와 어떤 산출물을 주고받는지를 한곳에서 탐색합니다.</p>
+    <div class="hero-actions"><a class="button primary" href="./graph.html">협업 그래프 보기</a><a class="button" href="#roles">전체 직무 보기</a></div>
+    <div class="stats" id="stats" aria-live="polite"></div>
+  </section>
+
+  <section id="roles" class="section">
+    <div class="section-heading"><div><p class="eyebrow">ROLES</p><h2>세부 직무</h2></div><p>직무명, 기술, 지식 키워드로 검색할 수 있습니다.</p></div>
+    <div class="toolbar">
+      <label class="search"><span class="sr-only">직무 검색</span><input id="searchInput" type="search" placeholder="예: TCP/IP, 셰이더, 전투, Python" autocomplete="off" /></label>
+      <div id="domainFilters" class="filters" aria-label="분야 필터"></div>
+    </div>
+    <div id="roleCount" class="result-count" aria-live="polite"></div>
+    <div id="roleGrid" class="role-grid"></div>
+    <div id="emptyState" class="empty-state" hidden>조건에 맞는 직무가 없습니다.</div>
+  </section>
+</main>
+<footer><p>게임 개발 직무 지식 지도 · 정적 GitHub Pages 프로젝트</p></footer>
+<script src="./assets/common.js"></script>
+<script src="./assets/roles.js"></script>
+</body>
+</html>

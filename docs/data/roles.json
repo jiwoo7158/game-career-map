@@ -1,0 +1,1603 @@
+{
+  "version": 1,
+  "roles": [
+    {
+      "id": "gameplay-programmer",
+      "title": "게임플레이 프로그래머",
+      "englishTitle": "Gameplay Programmer",
+      "domain": "프로그래밍",
+      "icon": "🎮",
+      "summary": "캐릭터 이동, 전투, 스킬, 아이템, 상호작용 등 플레이어가 직접 경험하는 게임 규칙과 기능을 구현한다.",
+      "responsibilities": [
+        "캐릭터 컨트롤과 상태 처리",
+        "전투·스킬·아이템·상호작용 시스템 구현",
+        "애니메이션·물리·UI 등 다른 시스템과 게임 로직 연결",
+        "기획 요구사항을 실제 플레이 가능한 기능으로 변환",
+        "게임플레이 버그 분석과 디버깅"
+      ],
+      "skills": [
+        "C++/C# 등 프로그래밍 능력",
+        "Unity·Unreal 사용 능력",
+        "객체지향 설계",
+        "자료구조·알고리즘 기초",
+        "캐릭터 컨트롤·전투·스킬·인벤토리 같은 게임 시스템 구현 능력",
+        "물리·애니메이션 시스템 활용",
+        "디버깅 능력"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "프로그래밍 기반",
+          "topics": [
+            "객체지향 설계와 컴포넌트 구조",
+            "자료구조와 알고리즘의 게임 로직 적용",
+            "이벤트·상태·메시지 기반 구조",
+            "디버깅과 로그 설계"
+          ]
+        },
+        {
+          "name": "게임 시스템",
+          "topics": [
+            "캐릭터 이동과 입력 처리",
+            "전투·피격·판정·쿨다운",
+            "스킬·아이템·인벤토리",
+            "상호작용과 상태 머신"
+          ]
+        },
+        {
+          "name": "엔진 연동",
+          "topics": [
+            "Unity MonoBehaviour/ScriptableObject 또는 Unreal Actor/Component 구조",
+            "물리 엔진과 충돌 처리",
+            "애니메이션 상태 및 이벤트 연동",
+            "프리팹·블루프린트·데이터 에셋 활용"
+          ]
+        },
+        {
+          "name": "품질과 확장성",
+          "topics": [
+            "기능 간 결합도 관리",
+            "데이터 주도 설계",
+            "세이브/로드와 상태 일관성",
+            "프로파일링을 통한 병목 확인"
+          ]
+        }
+      ],
+      "outputs": [
+        "캐릭터 컨트롤러",
+        "전투 시스템",
+        "스킬 시스템",
+        "아이템/인벤토리 시스템",
+        "상호작용 시스템"
+      ]
+    },
+    {
+      "id": "ai-programmer",
+      "title": "AI 프로그래머",
+      "englishTitle": "AI Programmer",
+      "domain": "프로그래밍",
+      "icon": "🧠",
+      "summary": "몬스터와 NPC가 상황을 인식하고 판단하고 행동하도록 게임 AI 구조와 알고리즘을 구현한다.",
+      "responsibilities": [
+        "몬스터·NPC 의사결정 로직 구현",
+        "길찾기와 이동 제어",
+        "Behavior Tree·FSM 등 행동 구조 설계",
+        "전투 AI와 전술 판단 구현",
+        "AI 성능과 디버깅 도구 개선"
+      ],
+      "skills": [
+        "C++/C# 프로그래밍",
+        "자료구조·알고리즘",
+        "FSM·Behavior Tree·Utility AI 등의 게임 AI 구조",
+        "A* 등 길찾기 알고리즘",
+        "NavMesh 활용",
+        "공간·벡터 수학",
+        "AI 디버깅 및 성능 최적화",
+        "전투·NPC 행동 설계에 대한 이해"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "의사결정 구조",
+          "topics": [
+            "Finite State Machine",
+            "Behavior Tree",
+            "Utility AI",
+            "Blackboard와 상황 정보 관리"
+          ]
+        },
+        {
+          "name": "이동과 탐색",
+          "topics": [
+            "그래프 탐색과 A*",
+            "NavMesh와 경로 추종",
+            "Steering Behavior",
+            "동적 장애물과 군집 이동"
+          ]
+        },
+        {
+          "name": "전투 AI",
+          "topics": [
+            "감지·시야·청각 모델",
+            "거리·위험도·우선순위 판단",
+            "공격 패턴과 쿨다운",
+            "팀 단위 전술과 역할 분담"
+          ]
+        },
+        {
+          "name": "성능과 도구",
+          "topics": [
+            "AI Tick 비용 관리",
+            "공간 분할과 검색 최적화",
+            "행동 시각화·디버그 드로잉",
+            "재현 가능한 AI 테스트"
+          ]
+        }
+      ],
+      "outputs": [
+        "몬스터 행동 트리",
+        "NPC 상태 머신",
+        "길찾기 시스템",
+        "전투 AI",
+        "AI 디버깅 도구"
+      ]
+    },
+    {
+      "id": "network-programmer",
+      "title": "네트워크 프로그래머",
+      "englishTitle": "Network Programmer",
+      "domain": "프로그래밍",
+      "icon": "🌐",
+      "summary": "실시간 멀티플레이에서 서버와 클라이언트가 상태를 주고받고 동기화하도록 통신 계층과 네트워크 게임 로직을 구현한다.",
+      "responsibilities": [
+        "서버-클라이언트 통신 구현",
+        "패킷·프로토콜 설계",
+        "플레이어와 오브젝트 상태 동기화",
+        "지연·패킷 손실 대응",
+        "매칭·세션·Replication 등 멀티플레이 기능 구현"
+      ],
+      "skills": [
+        "C/C++·C# 등의 프로그래밍",
+        "TCP/IP·UDP·소켓 프로그래밍",
+        "서버-클라이언트 구조",
+        "패킷 및 프로토콜 설계",
+        "동기화·RPC·Replication",
+        "지연·패킷 손실·보간·예측 처리",
+        "멀티스레딩·동시성",
+        "네트워크 보안 기초"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "네트워크 기초",
+          "topics": [
+            "TCP/IP 계층과 UDP/TCP 특성",
+            "소켓과 연결 생명주기",
+            "직렬화와 패킷 구조",
+            "대역폭·RTT·Jitter·Packet Loss"
+          ]
+        },
+        {
+          "name": "게임 동기화",
+          "topics": [
+            "Authoritative Server",
+            "RPC와 Replication",
+            "Snapshot/State Synchronization",
+            "Interpolation·Extrapolation·Client Prediction"
+          ]
+        },
+        {
+          "name": "실시간 문제 해결",
+          "topics": [
+            "Lag Compensation",
+            "Reconciliation",
+            "Tick Rate와 전송 주기",
+            "패킷 우선순위와 압축"
+          ]
+        },
+        {
+          "name": "안정성",
+          "topics": [
+            "동시성 제어",
+            "연결 끊김과 재접속",
+            "비정상 패킷 방어",
+            "네트워크 로그와 시뮬레이션 테스트"
+          ]
+        }
+      ],
+      "outputs": [
+        "패킷 프로토콜",
+        "동기화 시스템",
+        "세션/매칭 연동",
+        "지연 보정",
+        "네트워크 디버깅 도구"
+      ]
+    },
+    {
+      "id": "graphics-programmer",
+      "title": "그래픽스/렌더링 프로그래머",
+      "englishTitle": "Graphics / Rendering Programmer",
+      "domain": "프로그래밍",
+      "icon": "🖥️",
+      "summary": "GPU와 그래픽 API를 활용해 화면을 그리는 렌더링 파이프라인, 셰이더, 조명과 시각 품질 기술을 개발한다.",
+      "responsibilities": [
+        "렌더링 파이프라인 구현·개선",
+        "셰이더와 머티리얼 기능 개발",
+        "조명·그림자·후처리 기술 구현",
+        "GPU 병목 분석",
+        "그래픽 품질과 성능의 균형 조정"
+      ],
+      "skills": [
+        "C/C++",
+        "선형대수·벡터·행렬",
+        "3D 그래픽스 파이프라인",
+        "DirectX·Vulkan·OpenGL 등의 그래픽 API",
+        "HLSL·GLSL 셰이더",
+        "PBR·조명·그림자",
+        "GPU 구조와 병렬 처리",
+        "렌더링 성능 분석 및 최적화"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "수학과 파이프라인",
+          "topics": [
+            "벡터·행렬·좌표계 변환",
+            "Rasterization 파이프라인",
+            "카메라와 Projection",
+            "Depth·Stencil·Blend"
+          ]
+        },
+        {
+          "name": "셰이딩",
+          "topics": [
+            "Vertex/Pixel/Compute Shader",
+            "PBR과 BRDF 기초",
+            "텍스처 샘플링과 필터링",
+            "Normal/Shadow Mapping"
+          ]
+        },
+        {
+          "name": "렌더링 기술",
+          "topics": [
+            "Forward/Deferred Rendering",
+            "Post Processing",
+            "LOD·Occlusion·Culling",
+            "실시간 조명과 그림자"
+          ]
+        },
+        {
+          "name": "GPU 최적화",
+          "topics": [
+            "Draw Call과 Batch",
+            "GPU 파이프라인 병목",
+            "메모리 대역폭과 텍스처 비용",
+            "RenderDoc 등 GPU 캡처 분석"
+          ]
+        }
+      ],
+      "outputs": [
+        "렌더링 기능",
+        "셰이더 라이브러리",
+        "조명/그림자 시스템",
+        "후처리 효과",
+        "GPU 최적화"
+      ]
+    },
+    {
+      "id": "engine-programmer",
+      "title": "엔진 프로그래머",
+      "englishTitle": "Engine Programmer",
+      "domain": "프로그래밍",
+      "icon": "⚙️",
+      "summary": "렌더링, 물리, 메모리, 파일, 리소스 등 게임을 구동하는 핵심 엔진 시스템과 공통 기반을 개발한다.",
+      "responsibilities": [
+        "엔진 코어 시스템 설계",
+        "메모리·리소스 관리",
+        "파일·입출력·직렬화 기반 구현",
+        "멀티스레딩과 작업 시스템 개발",
+        "렌더링·물리 등 하위 시스템 통합"
+      ],
+      "skills": [
+        "C/C++ 고급 활용",
+        "자료구조·알고리즘",
+        "메모리 관리",
+        "멀티스레딩",
+        "운영체제·컴퓨터 구조",
+        "파일 시스템",
+        "물리·렌더링·리소스 시스템 구조",
+        "엔진 아키텍처 및 대규모 코드 설계 능력"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "저수준 기반",
+          "topics": [
+            "메모리 레이아웃·할당기",
+            "캐시와 데이터 지향 설계",
+            "스레드·락·Job System",
+            "OS API와 파일 I/O"
+          ]
+        },
+        {
+          "name": "엔진 구조",
+          "topics": [
+            "Game Loop",
+            "Entity/Component 구조",
+            "리소스 수명주기",
+            "Serialization과 Asset Pipeline"
+          ]
+        },
+        {
+          "name": "핵심 시스템",
+          "topics": [
+            "렌더링 시스템 경계",
+            "물리 엔진 통합",
+            "입력·오디오·파일 시스템",
+            "플랫폼 추상화"
+          ]
+        },
+        {
+          "name": "대규모 소프트웨어",
+          "topics": [
+            "모듈 경계와 의존성",
+            "빌드 시간과 컴파일 구조",
+            "ABI/API 안정성",
+            "프로파일링과 진단 시스템"
+          ]
+        }
+      ],
+      "outputs": [
+        "엔진 코어",
+        "리소스 시스템",
+        "메모리 시스템",
+        "Job System",
+        "플랫폼 추상화 계층"
+      ]
+    },
+    {
+      "id": "tools-programmer",
+      "title": "툴 프로그래머",
+      "englishTitle": "Tools Programmer",
+      "domain": "프로그래밍",
+      "icon": "🛠️",
+      "summary": "기획자·아티스트·프로그래머가 더 빠르고 안전하게 콘텐츠를 제작하도록 에디터와 자동화 도구를 만든다.",
+      "responsibilities": [
+        "레벨·데이터·콘텐츠 편집 도구 개발",
+        "Unity/Unreal 에디터 확장",
+        "반복 작업 자동화",
+        "데이터 검증 도구 제작",
+        "사용자 직군의 작업 흐름 개선"
+      ],
+      "skills": [
+        "C#·C++·Python 등의 프로그래밍",
+        "Unity/Unreal Editor 확장",
+        "GUI 제작",
+        "데이터 직렬화",
+        "파일 처리",
+        "에디터·자동화 도구 개발",
+        "UX에 대한 기본 이해",
+        "아티스트·기획자의 작업 과정에 대한 이해"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "에디터 개발",
+          "topics": [
+            "Editor Window/Inspector 확장",
+            "Unreal Editor Utility/Slate 계열",
+            "Undo/Redo와 선택 상태",
+            "Drag & Drop과 Asset Browser 연동"
+          ]
+        },
+        {
+          "name": "데이터 도구",
+          "topics": [
+            "JSON/CSV/ScriptableObject/DataAsset",
+            "Serialization과 Migration",
+            "Validation과 오류 표시",
+            "대량 편집과 검색"
+          ]
+        },
+        {
+          "name": "자동화",
+          "topics": [
+            "Python·Shell 기반 파이프라인",
+            "Import/Export 자동화",
+            "배치 처리",
+            "콘텐츠 검사와 리포트"
+          ]
+        },
+        {
+          "name": "도구 UX",
+          "topics": [
+            "작업 단계 최소화",
+            "실수 방지 설계",
+            "진행률·로그·오류 피드백",
+            "비개발자 사용자와 요구사항 정리"
+          ]
+        }
+      ],
+      "outputs": [
+        "레벨 에디터",
+        "데이터 편집기",
+        "에셋 검사기",
+        "자동화 스크립트",
+        "개발자용 디버그 도구"
+      ]
+    },
+    {
+      "id": "optimization-platform-programmer",
+      "title": "최적화/플랫폼 프로그래머",
+      "englishTitle": "Optimization / Platform Programmer",
+      "domain": "프로그래밍",
+      "icon": "🚀",
+      "summary": "CPU·GPU·메모리 병목을 분석하고 PC·콘솔·모바일 등 목표 플랫폼에서 안정적인 성능을 확보한다.",
+      "responsibilities": [
+        "CPU/GPU 병목 프로파일링",
+        "메모리 사용량 분석과 최적화",
+        "플랫폼별 성능·호환성 문제 해결",
+        "로딩·프레임 시간 개선",
+        "성능 회귀 감시와 기준 관리"
+      ],
+      "skills": [
+        "CPU·GPU·메모리 구조 이해",
+        "프로파일링 능력",
+        "멀티스레딩",
+        "메모리 관리",
+        "렌더링 최적화",
+        "알고리즘 최적화",
+        "플랫폼별 API 및 하드웨어 이해",
+        "Unity Profiler·Unreal Insights·RenderDoc 등의 분석 도구 활용"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "성능 모델",
+          "topics": [
+            "Frame Time Budget",
+            "CPU/GPU Bound 판별",
+            "캐시와 메모리 접근 패턴",
+            "GC와 할당 비용"
+          ]
+        },
+        {
+          "name": "프로파일링",
+          "topics": [
+            "Unity Profiler",
+            "Unreal Insights",
+            "RenderDoc/GPU Profiler",
+            "트레이스·샘플링·계측"
+          ]
+        },
+        {
+          "name": "플랫폼",
+          "topics": [
+            "PC/모바일/콘솔 하드웨어 차이",
+            "스레드와 코어 구성",
+            "그래픽 기능 수준",
+            "파일·스토리지·입출력 특성"
+          ]
+        },
+        {
+          "name": "최적화 방법",
+          "topics": [
+            "LOD/Culling/Batching",
+            "비동기 로딩",
+            "메모리 풀과 재사용",
+            "성능 회귀 테스트"
+          ]
+        }
+      ],
+      "outputs": [
+        "성능 분석 리포트",
+        "프레임 최적화",
+        "메모리 최적화",
+        "플랫폼 대응 코드",
+        "성능 기준/회귀 검사"
+      ]
+    },
+    {
+      "id": "ui-programmer",
+      "title": "UI 프로그래머",
+      "englishTitle": "UI Programmer",
+      "domain": "프로그래밍",
+      "icon": "🧩",
+      "summary": "메뉴, HUD, 인벤토리, 상점, 설정 등 사용자 인터페이스가 게임 데이터와 입력에 맞게 동작하도록 구현한다.",
+      "responsibilities": [
+        "HUD·메뉴·인벤토리 등 UI 기능 구현",
+        "게임 데이터와 UI 상태 연결",
+        "키보드·패드·터치 입력 처리",
+        "화면 전환과 UI 애니메이션",
+        "해상도·플랫폼 대응"
+      ],
+      "skills": [
+        "C++/C# 프로그래밍",
+        "Unity UI·UI Toolkit·Unreal UMG/Slate 등의 UI 시스템",
+        "이벤트 기반 프로그래밍",
+        "MVC/MVVM 등의 UI 구조",
+        "데이터 바인딩",
+        "애니메이션·입력 처리",
+        "다양한 해상도·플랫폼 대응"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "UI 구조",
+          "topics": [
+            "MVC/MVVM 개념",
+            "View와 게임 상태 분리",
+            "이벤트와 데이터 바인딩",
+            "화면 스택과 내비게이션"
+          ]
+        },
+        {
+          "name": "엔진 UI",
+          "topics": [
+            "Unity UI/uGUI와 UI Toolkit",
+            "Unreal UMG/Slate",
+            "레이아웃·Anchor·Responsive UI",
+            "UI 애니메이션"
+          ]
+        },
+        {
+          "name": "입력과 접근성",
+          "topics": [
+            "마우스·키보드·게임패드·터치",
+            "포커스와 내비게이션",
+            "키 리바인딩과 설정 반영",
+            "가독성과 상태 피드백"
+          ]
+        },
+        {
+          "name": "성능",
+          "topics": [
+            "UI Rebuild 비용",
+            "리스트 가상화",
+            "텍스처·폰트 관리",
+            "잦은 데이터 갱신 최적화"
+          ]
+        }
+      ],
+      "outputs": [
+        "HUD",
+        "메뉴 시스템",
+        "인벤토리 UI",
+        "상점/설정 UI",
+        "UI 내비게이션 구조"
+      ]
+    },
+    {
+      "id": "artist-2d-3d",
+      "title": "3D/2D 아티스트",
+      "englishTitle": "3D / 2D Artist",
+      "domain": "아트",
+      "icon": "🎨",
+      "summary": "캐릭터, 배경, 오브젝트, 텍스처, 스프라이트 등 게임 화면을 구성하는 시각 자산을 제작한다.",
+      "responsibilities": [
+        "캐릭터·환경·오브젝트 제작",
+        "텍스처·UV·머티리얼 제작",
+        "2D 스프라이트와 UI용 그래픽 제작",
+        "게임 엔진에 에셋 적용",
+        "LOD·폴리곤·텍스처 예산에 맞춘 최적화"
+      ],
+      "skills": [
+        "Blender·Maya·3ds Max·Photoshop 등의 제작 도구",
+        "모델링·텍스처링·UV·라이팅 기초",
+        "형태·색채·구도에 대한 미술 지식",
+        "게임용 에셋 최적화",
+        "LOD·폴리곤·텍스처 관리",
+        "Unity/Unreal 에셋 적용 과정 이해"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "조형과 시각 기초",
+          "topics": [
+            "형태·비례·실루엣",
+            "색채와 명암",
+            "구도와 시선 유도",
+            "스타일 일관성"
+          ]
+        },
+        {
+          "name": "3D 제작",
+          "topics": [
+            "모델링과 Topology",
+            "UV Unwrap",
+            "Baking과 Texture Set",
+            "PBR Material"
+          ]
+        },
+        {
+          "name": "2D 제작",
+          "topics": [
+            "Raster/Vector 자산",
+            "Sprite Sheet",
+            "해상도와 픽셀 밀도",
+            "레이어와 Export 규칙"
+          ]
+        },
+        {
+          "name": "실시간 최적화",
+          "topics": [
+            "Polygon Budget",
+            "LOD",
+            "Texture Resolution/Compression",
+            "엔진 Import 설정과 머티리얼 구성"
+          ]
+        }
+      ],
+      "outputs": [
+        "캐릭터/환경 모델",
+        "텍스처",
+        "스프라이트",
+        "게임용 머티리얼",
+        "최적화된 에셋"
+      ]
+    },
+    {
+      "id": "animator-rigger",
+      "title": "애니메이터 / 리거",
+      "englishTitle": "Animator / Rigger",
+      "domain": "아트",
+      "icon": "🦴",
+      "summary": "캐릭터 뼈대와 스키닝을 구성하고 이동·전투·표현 모션을 제작해 엔진의 애니메이션 시스템과 연결한다.",
+      "responsibilities": [
+        "Rig와 Skinning 제작",
+        "이동·전투·감정 모션 제작",
+        "IK/FK 및 제약 구성",
+        "모션 캡처 정리와 리타깃",
+        "엔진 애니메이션 상태 구성 지원"
+      ],
+      "skills": [
+        "Blender·Maya 등의 애니메이션 도구",
+        "인체 움직임과 타이밍 이해",
+        "Keyframe Animation",
+        "Rigging·Skinning",
+        "IK/FK",
+        "Animation Blend·State Machine 이해",
+        "모션 캡처 수정 및 리타깃",
+        "게임 엔진 애니메이션 시스템"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "움직임 원리",
+          "topics": [
+            "Pose와 Silhouette",
+            "Timing/Spacing",
+            "무게 중심과 관성",
+            "Anticipation과 Follow-through"
+          ]
+        },
+        {
+          "name": "리깅",
+          "topics": [
+            "Joint Hierarchy",
+            "Skin Weight",
+            "IK/FK",
+            "Constraint와 Control Rig"
+          ]
+        },
+        {
+          "name": "게임 애니메이션",
+          "topics": [
+            "Animation Clip",
+            "Blend Tree/Blend Space",
+            "State Machine",
+            "Root Motion과 In-place"
+          ]
+        },
+        {
+          "name": "파이프라인",
+          "topics": [
+            "Retargeting",
+            "Mocap Cleanup",
+            "Animation Event",
+            "프로그래머·전투 디자이너와 타이밍 조율"
+          ]
+        }
+      ],
+      "outputs": [
+        "캐릭터 Rig",
+        "이동/전투 애니메이션",
+        "리타깃 세트",
+        "Animation State 자료",
+        "모션 수정본"
+      ]
+    },
+    {
+      "id": "technical-artist",
+      "title": "테크니컬 아티스트(TA)",
+      "englishTitle": "Technical Artist",
+      "domain": "기술 아트",
+      "icon": "🔧",
+      "summary": "아트와 프로그래밍의 경계에서 셰이더, VFX, 최적화, 제작 도구와 아트 파이프라인을 연결하고 개선한다.",
+      "responsibilities": [
+        "아트 파이프라인 설계와 자동화",
+        "셰이더·머티리얼 기술 지원",
+        "아트 에셋 성능 최적화",
+        "DCC와 엔진 간 데이터 흐름 개선",
+        "아티스트와 프로그래머 사이 기술 문제 해결"
+      ],
+      "skills": [
+        "3D 아트 제작 과정 이해",
+        "Unity·Unreal",
+        "셰이더·렌더링 지식",
+        "Python 등 스크립팅",
+        "아트 파이프라인 자동화",
+        "VFX·재질 시스템",
+        "GPU·메모리 최적화",
+        "프로그래머와 아티스트 간 기술적 의사소통 능력"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "아트 파이프라인",
+          "topics": [
+            "DCC→Engine Import 흐름",
+            "Naming/Folder 규칙",
+            "Batch Export/Import",
+            "Asset Validation"
+          ]
+        },
+        {
+          "name": "실시간 그래픽",
+          "topics": [
+            "Shader Graph/HLSL 기초",
+            "PBR Material",
+            "텍스처·버텍스·드로우콜 비용",
+            "VFX와 렌더링 순서"
+          ]
+        },
+        {
+          "name": "자동화",
+          "topics": [
+            "Python 스크립팅",
+            "DCC 툴 API",
+            "엔진 Editor 확장",
+            "에셋 검사와 자동 수정"
+          ]
+        },
+        {
+          "name": "기술 조율",
+          "topics": [
+            "아트 품질과 성능 예산",
+            "문제 재현과 프로파일링",
+            "가이드 문서화",
+            "아티스트 친화적인 도구 UX"
+          ]
+        }
+      ],
+      "outputs": [
+        "아트 파이프라인",
+        "셰이더/머티리얼 도구",
+        "에셋 검사기",
+        "최적화 가이드",
+        "DCC 자동화 스크립트"
+      ]
+    },
+    {
+      "id": "vfx-artist",
+      "title": "VFX 아티스트",
+      "englishTitle": "VFX Artist",
+      "domain": "아트",
+      "icon": "✨",
+      "summary": "폭발, 마법, 총격, 불, 연기 등 플레이의 반응성과 분위기를 강화하는 실시간 시각 효과를 제작한다.",
+      "responsibilities": [
+        "전투·환경·UI 시각 효과 제작",
+        "파티클·메시·Flipbook 조합",
+        "셰이더·머티리얼 기반 효과 제작",
+        "타이밍과 가독성 조정",
+        "GPU 비용을 고려한 효과 최적화"
+      ],
+      "skills": [
+        "Unity Particle System·VFX Graph·Unreal Niagara",
+        "셰이더·머티리얼 기초",
+        "Photoshop·After Effects·Houdini 등의 도구",
+        "애니메이션·타이밍·색채 감각",
+        "Flipbook·Particle·Mesh Effect 제작",
+        "GPU 성능 최적화"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "실시간 이펙트",
+          "topics": [
+            "Particle System/Niagara/VFX Graph",
+            "Emitter와 Module",
+            "Mesh Particle",
+            "Trail/Beam"
+          ]
+        },
+        {
+          "name": "리소스 제작",
+          "topics": [
+            "Flipbook",
+            "Mask/Noise Texture",
+            "Distortion",
+            "간단한 Procedural Texture"
+          ]
+        },
+        {
+          "name": "표현 설계",
+          "topics": [
+            "타격감과 Timing",
+            "색과 밝기 계층",
+            "전투 가독성",
+            "카메라와 화면 점유율"
+          ]
+        },
+        {
+          "name": "최적화",
+          "topics": [
+            "Overdraw",
+            "Particle Count",
+            "Shader Complexity",
+            "LOD와 거리 기반 비활성화"
+          ]
+        }
+      ],
+      "outputs": [
+        "전투 VFX",
+        "환경 VFX",
+        "파티클 프리셋",
+        "Flipbook 리소스",
+        "최적화된 효과 세트"
+      ]
+    },
+    {
+      "id": "game-designer",
+      "title": "게임 디자이너 / 기획자",
+      "englishTitle": "Game Designer",
+      "domain": "디자인",
+      "icon": "🗺️",
+      "summary": "게임의 규칙, 시스템, 성장, 보상과 플레이 흐름을 설계하고 이를 개발 가능한 형태로 구조화한다.",
+      "responsibilities": [
+        "게임 규칙과 시스템 설계",
+        "성장·보상·경제 구조 설계",
+        "기능 명세와 데이터 정의",
+        "프로토타입과 플레이테스트",
+        "개발 직군과 요구사항 조율"
+      ],
+      "skills": [
+        "게임 시스템 설계",
+        "규칙·보상·성장 구조 설계",
+        "게임 분석 능력",
+        "문서 작성 및 데이터 정리",
+        "플레이어 경험 분석",
+        "논리적인 시스템 구조화",
+        "Unity/Unreal 등 엔진의 기본적인 사용 능력",
+        "개발 직군과의 커뮤니케이션"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "시스템 설계",
+          "topics": [
+            "Core Loop",
+            "Progression Loop",
+            "보상 구조",
+            "규칙과 예외 조건"
+          ]
+        },
+        {
+          "name": "플레이어 경험",
+          "topics": [
+            "동기와 목표",
+            "Feedback Loop",
+            "난이도와 학습 곡선",
+            "선택과 결과"
+          ]
+        },
+        {
+          "name": "명세와 데이터",
+          "topics": [
+            "기능 명세서",
+            "상태·조건·수치 정의",
+            "테이블 구조",
+            "예외 케이스"
+          ]
+        },
+        {
+          "name": "검증",
+          "topics": [
+            "Prototype",
+            "Playtest",
+            "가설과 관찰",
+            "피드백을 설계 변경으로 연결"
+          ]
+        }
+      ],
+      "outputs": [
+        "게임 시스템 문서",
+        "규칙 명세",
+        "성장/보상 구조",
+        "프로토타입",
+        "데이터 테이블"
+      ]
+    },
+    {
+      "id": "combat-designer",
+      "title": "전투 디자이너",
+      "englishTitle": "Combat Designer",
+      "domain": "디자인",
+      "icon": "⚔️",
+      "summary": "캐릭터 스킬, 무기, 적 패턴, 판정과 전투 흐름을 설계해 손맛과 전략성을 만든다.",
+      "responsibilities": [
+        "캐릭터·무기·스킬 설계",
+        "적 공격 패턴 설계",
+        "피격·판정·거리·타이밍 조정",
+        "전투 수치와 난이도 조절",
+        "애니메이션·VFX·게임플레이 구현과 조율"
+      ],
+      "skills": [
+        "전투 시스템 분석",
+        "캐릭터·스킬·무기 설계",
+        "적 행동 패턴 설계",
+        "프레임·쿨타임·거리·판정 등 전투 수치 이해",
+        "애니메이션과 전투의 연결 이해",
+        "플레이테스트·밸런싱",
+        "Unity/Unreal 등을 이용한 프로토타이핑"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "전투 구조",
+          "topics": [
+            "공격·방어·회피 관계",
+            "Risk/Reward",
+            "자원과 쿨다운",
+            "전투 루프와 템포"
+          ]
+        },
+        {
+          "name": "판정과 타이밍",
+          "topics": [
+            "Startup/Active/Recovery",
+            "Hitbox/Hurtbox",
+            "사거리와 이동 거리",
+            "Cancel/Combo Window"
+          ]
+        },
+        {
+          "name": "적 설계",
+          "topics": [
+            "Telegraph",
+            "패턴 조합",
+            "역할별 적 구성",
+            "보스 Phase와 난이도 곡선"
+          ]
+        },
+        {
+          "name": "프로토타입과 튜닝",
+          "topics": [
+            "엔진 내 빠른 프로토타입",
+            "디버그 수치 노출",
+            "플레이테스트 기록",
+            "애니메이션·VFX·사운드와 타격감 조율"
+          ]
+        }
+      ],
+      "outputs": [
+        "스킬 명세",
+        "무기/캐릭터 전투 규칙",
+        "적 패턴",
+        "전투 수치표",
+        "전투 프로토타입"
+      ]
+    },
+    {
+      "id": "level-designer",
+      "title": "레벨 디자이너",
+      "englishTitle": "Level Designer",
+      "domain": "디자인",
+      "icon": "🗺️",
+      "summary": "맵 구조, 진행 동선, 적과 아이템 배치, 퍼즐과 이벤트를 설계해 공간 안의 플레이 경험을 만든다.",
+      "responsibilities": [
+        "레벨 구조와 플레이 동선 설계",
+        "Blockout/Grayboxing",
+        "적·아이템·이벤트 배치",
+        "난이도와 페이싱 조정",
+        "플레이테스트 기반 반복 수정"
+      ],
+      "skills": [
+        "공간 설계",
+        "플레이어 동선과 시야 설계",
+        "난이도 및 페이싱 조절",
+        "적·아이템·이벤트 배치",
+        "Unity/Unreal 레벨 제작",
+        "Blockout·Greyboxing",
+        "환경 아트에 대한 기본 이해",
+        "플레이테스트를 통한 반복 수정 능력"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "공간 설계",
+          "topics": [
+            "동선과 분기",
+            "Landmark와 시선 유도",
+            "전투 공간 크기",
+            "수직성·엄폐·개방도"
+          ]
+        },
+        {
+          "name": "Blockout",
+          "topics": [
+            "Primitive 기반 Graybox",
+            "Metrics와 Scale",
+            "Traversal 검증",
+            "빠른 반복 수정"
+          ]
+        },
+        {
+          "name": "배치와 페이싱",
+          "topics": [
+            "적 Encounter",
+            "보상 위치",
+            "휴식과 긴장 구간",
+            "튜토리얼과 난이도 상승"
+          ]
+        },
+        {
+          "name": "협업",
+          "topics": [
+            "환경 아트 전달",
+            "AI NavMesh 검증",
+            "게임플레이 시스템 활용",
+            "성능 예산과 Streaming 고려"
+          ]
+        }
+      ],
+      "outputs": [
+        "레벨 Blockout",
+        "Encounter 배치",
+        "진행 동선",
+        "퍼즐/이벤트 배치",
+        "레벨 테스트 리포트"
+      ]
+    },
+    {
+      "id": "balance-designer",
+      "title": "밸런스 디자이너",
+      "englishTitle": "Balance Designer",
+      "domain": "디자인",
+      "icon": "📊",
+      "summary": "공격력, 체력, 성장량, 드랍률, 재화 등 수치 체계를 분석하고 조정해 게임의 난이도와 경제 흐름을 맞춘다.",
+      "responsibilities": [
+        "전투·성장 수치 설계",
+        "경제와 재화 흐름 조정",
+        "드랍률·보상량 설계",
+        "데이터 분석과 시뮬레이션",
+        "플레이테스트 결과에 따른 수치 조정"
+      ],
+      "skills": [
+        "수치 분석",
+        "확률·통계 기초",
+        "Excel·Google Sheets 활용",
+        "성장 곡선·경제 구조 설계",
+        "전투 수치 계산",
+        "데이터 분석",
+        "시뮬레이션과 플레이테스트",
+        "게임 시스템 간 상호작용 분석"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "수학 기반",
+          "topics": [
+            "비율과 성장 함수",
+            "확률·기댓값",
+            "기초 통계",
+            "분포와 변동성"
+          ]
+        },
+        {
+          "name": "전투 밸런스",
+          "topics": [
+            "DPS/EHP",
+            "TTK",
+            "쿨다운과 자원 효율",
+            "난이도 스케일링"
+          ]
+        },
+        {
+          "name": "경제와 성장",
+          "topics": [
+            "재화 Source/Sink",
+            "보상 곡선",
+            "드랍 테이블",
+            "인플레이션과 희소성"
+          ]
+        },
+        {
+          "name": "분석과 실험",
+          "topics": [
+            "Spreadsheet 모델",
+            "간단한 시뮬레이션",
+            "플레이 로그 해석",
+            "변경 전후 비교"
+          ]
+        }
+      ],
+      "outputs": [
+        "밸런스 테이블",
+        "성장 곡선",
+        "드랍/경제 모델",
+        "시뮬레이션",
+        "튜닝 리포트"
+      ]
+    },
+    {
+      "id": "narrative-designer-writer",
+      "title": "내러티브 디자이너 / 라이터",
+      "englishTitle": "Narrative Designer / Writer",
+      "domain": "디자인",
+      "icon": "📖",
+      "summary": "세계관, 캐릭터, 퀘스트, 대사와 분기 구조를 설계하고 이야기와 게임플레이가 자연스럽게 연결되도록 구성한다.",
+      "responsibilities": [
+        "세계관과 캐릭터 설정",
+        "퀘스트와 분기 구조 설계",
+        "대사와 서사 텍스트 작성",
+        "플레이어 선택과 결과 연결",
+        "기획·레벨·게임플레이 시스템과 이야기 통합"
+      ],
+      "skills": [
+        "스토리 구조와 캐릭터 설계",
+        "대사 작성",
+        "세계관 구축",
+        "퀘스트 및 분기 구조 설계",
+        "플레이어 선택과 게임 시스템을 고려한 서사 설계",
+        "시나리오 작성 도구 활용",
+        "게임 플레이와 이야기의 연결 능력"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "서사 구조",
+          "topics": [
+            "갈등과 목표",
+            "캐릭터 Arc",
+            "장면과 Beat",
+            "정보 공개 순서"
+          ]
+        },
+        {
+          "name": "인터랙티브 서사",
+          "topics": [
+            "분기와 조건",
+            "Choice/Consequence",
+            "퀘스트 상태",
+            "플레이어 행위와 서사 반응"
+          ]
+        },
+        {
+          "name": "게임 텍스트",
+          "topics": [
+            "대사",
+            "아이템/퀘스트 설명",
+            "환경 서사",
+            "UI 텍스트와 맥락"
+          ]
+        },
+        {
+          "name": "구현 연계",
+          "topics": [
+            "Narrative Tool",
+            "Localization 고려",
+            "퀘스트 데이터 구조",
+            "레벨·시스템과 Trigger 연결"
+          ]
+        }
+      ],
+      "outputs": [
+        "세계관 문서",
+        "퀘스트 구조",
+        "대사 스크립트",
+        "분기 플로우",
+        "내러티브 데이터"
+      ]
+    },
+    {
+      "id": "sound-designer",
+      "title": "사운드 디자이너",
+      "englishTitle": "Sound Designer",
+      "domain": "오디오",
+      "icon": "🔊",
+      "summary": "효과음, 환경음, UI 사운드를 제작하고 게임 상태에 맞게 재생되도록 오디오 시스템에 적용한다.",
+      "responsibilities": [
+        "효과음 녹음·편집·합성",
+        "환경음과 공간감 설계",
+        "UI·전투 사운드 제작",
+        "Wwise/FMOD 또는 엔진 오디오 적용",
+        "상황별 동적 사운드 구성"
+      ],
+      "skills": [
+        "효과음 녹음·편집·합성",
+        "Audition·Pro Tools·Reaper 등의 DAW",
+        "Wwise·FMOD 같은 오디오 미들웨어",
+        "공간 음향·3D Audio 이해",
+        "게임 상황에 따른 동적 사운드 설계",
+        "Unity/Unreal 오디오 시스템"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "오디오 제작",
+          "topics": [
+            "Recording",
+            "Editing/Cleanup",
+            "Layering과 Synthesis",
+            "Loudness와 Dynamic Range"
+          ]
+        },
+        {
+          "name": "게임 오디오",
+          "topics": [
+            "One-shot/Loop",
+            "Randomization",
+            "Parameter 기반 변화",
+            "Audio Event 구조"
+          ]
+        },
+        {
+          "name": "공간 음향",
+          "topics": [
+            "Attenuation",
+            "3D Positioning",
+            "Occlusion/Obstruction",
+            "Reverb Zone"
+          ]
+        },
+        {
+          "name": "미들웨어 연동",
+          "topics": [
+            "Wwise/FMOD Event",
+            "State/Switch",
+            "RTPC/Parameter",
+            "엔진 Trigger와 프로파일링"
+          ]
+        }
+      ],
+      "outputs": [
+        "전투 SFX",
+        "환경음",
+        "UI 사운드",
+        "오디오 이벤트",
+        "공간 음향 설정"
+      ]
+    },
+    {
+      "id": "game-composer",
+      "title": "게임 작곡가",
+      "englishTitle": "Game Composer",
+      "domain": "오디오",
+      "icon": "🎼",
+      "summary": "게임의 분위기, 장소, 전투와 감정 흐름을 음악으로 설계하고 필요하면 플레이 상태에 반응하는 음악 구조를 만든다.",
+      "responsibilities": [
+        "배경음악과 테마곡 작곡",
+        "전투·보스·지역 음악 제작",
+        "편곡·오케스트레이션·믹싱",
+        "Adaptive Music 구조 설계",
+        "오디오 미들웨어를 통한 게임 상태 연동"
+      ],
+      "skills": [
+        "작곡·화성학·편곡",
+        "MIDI 및 DAW 활용",
+        "오케스트레이션 또는 전자음악 제작",
+        "게임 상황에 따른 Adaptive Music 설계",
+        "Wwise·FMOD 연동",
+        "게임 분위기와 플레이 흐름에 맞는 음악 구성 능력"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "음악 이론과 제작",
+          "topics": [
+            "화성과 선율",
+            "리듬과 형식",
+            "편곡과 오케스트레이션",
+            "MIDI/Virtual Instrument"
+          ]
+        },
+        {
+          "name": "게임 음악 설계",
+          "topics": [
+            "지역/캐릭터 Motif",
+            "전투 Intensification",
+            "Loop Point",
+            "장면 전환"
+          ]
+        },
+        {
+          "name": "Adaptive Music",
+          "topics": [
+            "Horizontal Resequencing",
+            "Vertical Layering",
+            "State/Parameter 전환",
+            "Transition Cue"
+          ]
+        },
+        {
+          "name": "구현",
+          "topics": [
+            "Wwise/FMOD Music System",
+            "Stem 관리",
+            "메모리·스트리밍 고려",
+            "사운드 디자이너와 믹스 조율"
+          ]
+        }
+      ],
+      "outputs": [
+        "BGM",
+        "전투 음악",
+        "캐릭터/지역 테마",
+        "Adaptive Music 세트",
+        "스템/루프 리소스"
+      ]
+    },
+    {
+      "id": "qa-engineer",
+      "title": "QA / QA 엔지니어",
+      "englishTitle": "QA / QA Engineer",
+      "domain": "품질",
+      "icon": "🧪",
+      "summary": "게임의 기능과 품질을 검증하고 버그를 재현·분류하며 반복 가능한 테스트 체계와 자동화를 만든다.",
+      "responsibilities": [
+        "테스트 계획과 케이스 작성",
+        "버그 발견·재현·우선순위 분류",
+        "정확한 버그 리포트 작성",
+        "회귀 테스트",
+        "테스트 자동화와 로그 분석"
+      ],
+      "skills": [
+        "테스트 케이스 설계",
+        "버그 발견·재현·분류 능력",
+        "정확한 버그 리포트 작성",
+        "게임 시스템 분석",
+        "Python 등 스크립트를 활용한 테스트 자동화",
+        "로그 분석",
+        "Git·Jira 등의 협업 도구",
+        "소프트웨어 테스트 방법론"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "테스트 설계",
+          "topics": [
+            "기능 테스트",
+            "경계값·예외 케이스",
+            "회귀 테스트",
+            "탐색적 테스트"
+          ]
+        },
+        {
+          "name": "버그 관리",
+          "topics": [
+            "재현 절차",
+            "Expected/Actual",
+            "Severity/Priority",
+            "환경·로그·영상 증거"
+          ]
+        },
+        {
+          "name": "자동화",
+          "topics": [
+            "Python 스크립트",
+            "테스트 데이터 생성",
+            "Smoke Test",
+            "Build별 반복 검증"
+          ]
+        },
+        {
+          "name": "분석",
+          "topics": [
+            "로그와 Crash Dump 기초",
+            "네트워크/성능 문제 재현",
+            "결함 패턴 분류",
+            "개발 직군과 재현 조건 공유"
+          ]
+        }
+      ],
+      "outputs": [
+        "테스트 케이스",
+        "버그 리포트",
+        "회귀 테스트 세트",
+        "자동화 스크립트",
+        "품질 리포트"
+      ]
+    },
+    {
+      "id": "producer-pm",
+      "title": "프로듀서 / PM",
+      "englishTitle": "Producer / Project Manager",
+      "domain": "관리",
+      "icon": "📋",
+      "summary": "개발 목표, 일정, 인력, 우선순위, 리스크와 팀 간 의사소통을 관리해 프로젝트가 계획대로 진행되도록 조율한다.",
+      "responsibilities": [
+        "일정과 마일스톤 관리",
+        "인력·우선순위·범위 조정",
+        "리스크와 의존성 관리",
+        "회의·의사결정·문서화",
+        "직군 간 협업과 문제 해결 조율"
+      ],
+      "skills": [
+        "일정·인력·리스크 관리",
+        "프로젝트 관리 방법론",
+        "Jira·Notion 등 관리 도구",
+        "개발 과정에 대한 이해",
+        "요구사항 및 우선순위 관리",
+        "직군 간 커뮤니케이션",
+        "문제 조율·의사결정·문서화 능력"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "프로젝트 운영",
+          "topics": [
+            "Milestone/Sprint",
+            "Scope와 일정",
+            "Resource 배분",
+            "Dependency 관리"
+          ]
+        },
+        {
+          "name": "리스크",
+          "topics": [
+            "Risk Register",
+            "Blocker 관리",
+            "변경 영향도",
+            "출시 기준과 의사결정"
+          ]
+        },
+        {
+          "name": "협업",
+          "topics": [
+            "회의 설계",
+            "Action Item",
+            "문서화",
+            "직군 간 요구사항 번역"
+          ]
+        },
+        {
+          "name": "개발 이해",
+          "topics": [
+            "게임 제작 파이프라인",
+            "버전 관리와 빌드 흐름",
+            "QA/Release 단계",
+            "기술 부채와 일정 간 관계"
+          ]
+        }
+      ],
+      "outputs": [
+        "일정/마일스톤",
+        "우선순위 백로그",
+        "리스크 목록",
+        "회의 결정 기록",
+        "릴리스 계획"
+      ]
+    },
+    {
+      "id": "build-devops-engineer",
+      "title": "Build / DevOps 엔지니어",
+      "englishTitle": "Build / DevOps Engineer",
+      "domain": "인프라",
+      "icon": "🔨",
+      "summary": "코드와 콘텐츠를 안정적으로 빌드·테스트·배포할 수 있도록 CI/CD, 자동 빌드, 개발 서버와 인프라를 구성한다.",
+      "responsibilities": [
+        "자동 빌드 파이프라인 구축",
+        "CI/CD 구성",
+        "빌드 아티팩트와 버전 관리",
+        "개발·테스트 서버 운영",
+        "배포 자동화와 빌드 실패 분석"
+      ],
+      "skills": [
+        "Git 등 버전 관리",
+        "CI/CD",
+        "Jenkins·GitHub Actions 등의 자동화 도구",
+        "Python·Shell·PowerShell 스크립팅",
+        "Linux·Windows 환경",
+        "Docker 등 컨테이너 기술",
+        "자동 빌드·배포",
+        "개발 서버 및 클라우드 인프라 관리"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "버전과 빌드",
+          "topics": [
+            "Git Branch/Tag",
+            "Build Configuration",
+            "Artifact Versioning",
+            "Reproducible Build"
+          ]
+        },
+        {
+          "name": "CI/CD",
+          "topics": [
+            "Pipeline Stage",
+            "Build/Test/Package",
+            "Cache",
+            "Secret 관리"
+          ]
+        },
+        {
+          "name": "자동화",
+          "topics": [
+            "Shell/PowerShell/Python",
+            "Jenkins/GitHub Actions",
+            "Notification",
+            "실패 로그 수집"
+          ]
+        },
+        {
+          "name": "인프라",
+          "topics": [
+            "Linux/Windows 서버",
+            "Docker",
+            "Cloud VM/Storage",
+            "배포·롤백과 권한 관리"
+          ]
+        }
+      ],
+      "outputs": [
+        "CI/CD Pipeline",
+        "자동 빌드",
+        "배포 스크립트",
+        "개발 서버 환경",
+        "빌드 모니터링"
+      ]
+    },
+    {
+      "id": "backend-server-programmer",
+      "title": "백엔드/서버 프로그래머",
+      "englishTitle": "Backend / Server Programmer",
+      "domain": "프로그래밍",
+      "icon": "☁️",
+      "summary": "계정, 데이터 저장, 랭킹, 친구, 길드, 상점 등 지속성 있는 온라인 게임 서비스를 제공하는 서버 시스템을 개발한다.",
+      "responsibilities": [
+        "계정·인증·유저 데이터 서버 개발",
+        "DB 저장·조회와 트랜잭션 처리",
+        "랭킹·친구·길드·상점 API 개발",
+        "서버 확장성과 장애 대응",
+        "운영 로그·보안·클라우드 환경 관리"
+      ],
+      "skills": [
+        "C++·C#·Java·Go 등의 서버 프로그래밍",
+        "TCP/IP·HTTP·WebSocket",
+        "데이터베이스·SQL·Redis",
+        "서버 아키텍처",
+        "멀티스레딩·비동기 프로그래밍",
+        "동시성·트랜잭션",
+        "REST API",
+        "인증·보안",
+        "AWS/GCP 등 클라우드 환경"
+      ],
+      "knowledgeAreas": [
+        {
+          "name": "서버 프로그래밍",
+          "topics": [
+            "Request/Response와 연결 관리",
+            "비동기 I/O",
+            "Thread Pool/Event Loop",
+            "에러 처리와 Timeout"
+          ]
+        },
+        {
+          "name": "데이터",
+          "topics": [
+            "관계형 DB와 SQL",
+            "Index와 Query 비용",
+            "Transaction/Isolation",
+            "Redis Cache"
+          ]
+        },
+        {
+          "name": "서비스 기능",
+          "topics": [
+            "계정·인증",
+            "랭킹·친구·길드",
+            "상점·우편·보상",
+            "REST/WebSocket API"
+          ]
+        },
+        {
+          "name": "운영과 확장",
+          "topics": [
+            "Stateless/Stateful 구조",
+            "Load Balancing",
+            "로그·모니터링",
+            "보안·클라우드·장애 복구"
+          ]
+        }
+      ],
+      "outputs": [
+        "계정/인증 서버",
+        "게임 서비스 API",
+        "DB Schema",
+        "랭킹/길드/상점 시스템",
+        "운영 로그/모니터링"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "version": 1,
+  "relations": [
+    {
+      "source": "gameplay-programmer",
+      "target": "game-designer",
+      "type": "설계-구현",
+      "label": "시스템 명세 구현",
+      "weight": 3,
+      "reason": "게임 규칙과 기능 명세를 실제 플레이 가능한 로직으로 구현한다."
+    },
+    {
+      "source": "gameplay-programmer",
+      "target": "combat-designer",
+      "type": "설계-구현",
+      "label": "전투 로직 구현",
+      "weight": 3,
+      "reason": "스킬, 판정, 쿨다운, 피격 등의 전투 규칙을 구현하고 반복 튜닝한다."
+    },
+    {
+      "source": "gameplay-programmer",
+      "target": "animator-rigger",
+      "type": "콘텐츠 연동",
+      "label": "애니메이션 연동",
+      "weight": 3,
+      "reason": "이동·공격 상태와 애니메이션 클립, 이벤트, Root Motion을 연결한다."
+    },
+    {
+      "source": "gameplay-programmer",
+      "target": "vfx-artist",
+      "type": "콘텐츠 연동",
+      "label": "VFX 트리거",
+      "weight": 2,
+      "reason": "스킬·피격·상호작용 시점에 시각 효과가 정확히 재생되도록 연결한다."
+    },
+    {
+      "source": "gameplay-programmer",
+      "target": "sound-designer",
+      "type": "콘텐츠 연동",
+      "label": "사운드 트리거",
+      "weight": 2,
+      "reason": "게임 이벤트를 효과음과 연결하고 상태에 맞는 재생 조건을 제공한다."
+    },
+    {
+      "source": "gameplay-programmer",
+      "target": "ui-programmer",
+      "type": "시스템 연동",
+      "label": "게임 상태 ↔ UI",
+      "weight": 3,
+      "reason": "체력, 스킬, 인벤토리 등 게임 상태를 UI가 표시·조작할 수 있도록 연결한다."
+    },
+    {
+      "source": "gameplay-programmer",
+      "target": "ai-programmer",
+      "type": "시스템 연동",
+      "label": "플레이어-적 상호작용",
+      "weight": 2,
+      "reason": "전투 규칙, 피격, 상태 효과 등 플레이어와 AI가 공유하는 게임 규칙을 맞춘다."
+    },
+    {
+      "source": "gameplay-programmer",
+      "target": "network-programmer",
+      "type": "시스템 연동",
+      "label": "멀티플레이 동기화",
+      "weight": 3,
+      "reason": "게임플레이 상태 중 어떤 데이터를 서버 권한으로 처리하고 동기화할지 협의한다."
+    },
+    {
+      "source": "gameplay-programmer",
+      "target": "qa-engineer",
+      "type": "검증",
+      "label": "기능 검증",
+      "weight": 2,
+      "reason": "플레이 기능의 정상·예외 동작과 회귀 문제를 재현하고 수정한다."
+    },
+    {
+      "source": "ai-programmer",
+      "target": "combat-designer",
+      "type": "설계-구현",
+      "label": "적 행동 구현",
+      "weight": 3,
+      "reason": "적 패턴과 전투 의도를 실제 판단·행동 로직으로 변환한다."
+    },
+    {
+      "source": "ai-programmer",
+      "target": "level-designer",
+      "type": "시스템 연동",
+      "label": "공간·NavMesh",
+      "weight": 3,
+      "reason": "레벨 구조와 NavMesh, 시야, 이동 가능 영역이 AI 행동에 직접 영향을 준다."
+    },
+    {
+      "source": "ai-programmer",
+      "target": "engine-programmer",
+      "type": "기술 의존",
+      "label": "AI 기반 시스템",
+      "weight": 2,
+      "reason": "Navigation, Job System, 디버깅 기능 등 엔진 계층 기능을 활용한다."
+    },
+    {
+      "source": "ai-programmer",
+      "target": "optimization-platform-programmer",
+      "type": "성능 협업",
+      "label": "AI Tick 최적화",
+      "weight": 2,
+      "reason": "다수 AI의 탐색과 판단 비용을 프로파일링하고 최적화한다."
+    },
+    {
+      "source": "ai-programmer",
+      "target": "qa-engineer",
+      "type": "검증",
+      "label": "AI 재현 테스트",
+      "weight": 2,
+      "reason": "비결정적이거나 상황 의존적인 AI 문제의 재현 조건을 함께 구축한다."
+    },
+    {
+      "source": "network-programmer",
+      "target": "backend-server-programmer",
+      "type": "서버 경계",
+      "label": "실시간 ↔ 서비스 서버",
+      "weight": 3,
+      "reason": "실시간 세션 데이터와 계정·매칭·영속 데이터의 경계를 정의하고 연동한다."
+    },
+    {
+      "source": "network-programmer",
+      "target": "engine-programmer",
+      "type": "기술 의존",
+      "label": "네트워크 기반 계층",
+      "weight": 2,
+      "reason": "소켓, 스레드, 플랫폼 추상화 등 엔진 기반 기능과 연동한다."
+    },
+    {
+      "source": "network-programmer",
+      "target": "optimization-platform-programmer",
+      "type": "성능 협업",
+      "label": "대역폭·지연 최적화",
+      "weight": 2,
+      "reason": "네트워크 전송량과 CPU 비용이 플랫폼 성능 목표를 넘지 않도록 조정한다."
+    },
+    {
+      "source": "network-programmer",
+      "target": "qa-engineer",
+      "type": "검증",
+      "label": "지연/손실 테스트",
+      "weight": 3,
+      "reason": "패킷 손실, 높은 RTT, 재접속 등 실제 네트워크 조건을 재현한다."
+    },
+    {
+      "source": "graphics-programmer",
+      "target": "engine-programmer",
+      "type": "기술 의존",
+      "label": "렌더링 엔진",
+      "weight": 3,
+      "reason": "렌더링 시스템은 엔진의 메모리, 리소스, 플랫폼 계층과 깊게 연결된다."
+    },
+    {
+      "source": "graphics-programmer",
+      "target": "technical-artist",
+      "type": "기술 아트",
+      "label": "셰이더·머티리얼",
+      "weight": 3,
+      "reason": "렌더링 기능을 아티스트가 사용할 수 있는 셰이더·머티리얼 워크플로로 연결한다."
+    },
+    {
+      "source": "graphics-programmer",
+      "target": "artist-2d-3d",
+      "type": "콘텐츠 연동",
+      "label": "에셋 렌더링 요구",
+      "weight": 2,
+      "reason": "모델·텍스처·머티리얼이 렌더링 파이프라인의 제약과 기능에 맞아야 한다."
+    },
+    {
+      "source": "graphics-programmer",
+      "target": "vfx-artist",
+      "type": "기술 아트",
+      "label": "VFX 렌더링",
+      "weight": 2,
+      "reason": "투명도, 파티클, 셰이더 기능과 렌더링 순서가 VFX 품질과 비용을 좌우한다."
+    },
+    {
+      "source": "graphics-programmer",
+      "target": "optimization-platform-programmer",
+      "type": "성능 협업",
+      "label": "GPU 최적화",
+      "weight": 3,
+      "reason": "GPU 병목, 메모리 대역폭, 드로우콜을 함께 분석한다."
+    },
+    {
+      "source": "engine-programmer",
+      "target": "tools-programmer",
+      "type": "기반 제공",
+      "label": "엔진 API ↔ 개발 도구",
+      "weight": 2,
+      "reason": "에디터와 툴은 엔진의 데이터 모델과 API를 사용해 콘텐츠 제작 기능을 제공한다."
+    },
+    {
+      "source": "engine-programmer",
+      "target": "build-devops-engineer",
+      "type": "빌드 협업",
+      "label": "엔진 빌드·플랫폼",
+      "weight": 2,
+      "reason": "대규모 엔진 코드의 컴파일, 플랫폼 빌드, 심볼과 아티팩트 관리가 연결된다."
+    },
+    {
+      "source": "engine-programmer",
+      "target": "optimization-platform-programmer",
+      "type": "성능 협업",
+      "label": "저수준 성능",
+      "weight": 3,
+      "reason": "메모리·스레드·I/O 등 엔진 코어 병목을 함께 분석한다."
+    },
+    {
+      "source": "tools-programmer",
+      "target": "game-designer",
+      "type": "도구 지원",
+      "label": "기획 데이터 도구",
+      "weight": 3,
+      "reason": "기획자가 규칙과 수치를 안전하게 편집·검증할 수 있는 도구를 제공한다."
+    },
+    {
+      "source": "tools-programmer",
+      "target": "level-designer",
+      "type": "도구 지원",
+      "label": "레벨 제작 도구",
+      "weight": 3,
+      "reason": "배치, 검증, 대량 편집 등 레벨 제작 워크플로를 개선한다."
+    },
+    {
+      "source": "tools-programmer",
+      "target": "artist-2d-3d",
+      "type": "도구 지원",
+      "label": "에셋 파이프라인 도구",
+      "weight": 2,
+      "reason": "Import, Naming, Batch Processing 등 반복 아트 작업을 자동화한다."
+    },
+    {
+      "source": "tools-programmer",
+      "target": "technical-artist",
+      "type": "도구 협업",
+      "label": "파이프라인 자동화",
+      "weight": 3,
+      "reason": "기술 아트 요구사항을 범용 툴과 자동화 시스템으로 구현한다."
+    },
+    {
+      "source": "tools-programmer",
+      "target": "qa-engineer",
+      "type": "도구 지원",
+      "label": "검증/디버그 도구",
+      "weight": 2,
+      "reason": "테스트 데이터 생성과 상태 시각화 등 재현·검증 도구를 제공한다."
+    },
+    {
+      "source": "optimization-platform-programmer",
+      "target": "artist-2d-3d",
+      "type": "성능 협업",
+      "label": "에셋 예산",
+      "weight": 2,
+      "reason": "폴리곤, 텍스처, LOD 등 플랫폼별 에셋 예산을 정하고 병목을 공유한다."
+    },
+    {
+      "source": "optimization-platform-programmer",
+      "target": "technical-artist",
+      "type": "성능 협업",
+      "label": "아트 성능 예산",
+      "weight": 3,
+      "reason": "GPU/메모리 측정 결과를 실제 아트 파이프라인과 제작 규칙에 반영한다."
+    },
+    {
+      "source": "optimization-platform-programmer",
+      "target": "vfx-artist",
+      "type": "성능 협업",
+      "label": "VFX 비용 관리",
+      "weight": 2,
+      "reason": "Overdraw, 파티클 수, 셰이더 복잡도를 목표 프레임 안에서 관리한다."
+    },
+    {
+      "source": "optimization-platform-programmer",
+      "target": "build-devops-engineer",
+      "type": "플랫폼 협업",
+      "label": "플랫폼 빌드·측정",
+      "weight": 2,
+      "reason": "대상 플랫폼 빌드와 자동 성능 측정 환경을 안정적으로 유지한다."
+    },
+    {
+      "source": "ui-programmer",
+      "target": "game-designer",
+      "type": "설계-구현",
+      "label": "UX 흐름 구현",
+      "weight": 2,
+      "reason": "메뉴와 시스템 조작 흐름을 화면 상태와 입력 구조로 구현한다."
+    },
+    {
+      "source": "ui-programmer",
+      "target": "artist-2d-3d",
+      "type": "콘텐츠 연동",
+      "label": "UI 그래픽 적용",
+      "weight": 2,
+      "reason": "아이콘, 배경, 폰트 등 그래픽 자산을 실제 UI 레이아웃에 적용한다."
+    },
+    {
+      "source": "ui-programmer",
+      "target": "qa-engineer",
+      "type": "검증",
+      "label": "입력/해상도 테스트",
+      "weight": 2,
+      "reason": "해상도, 로컬라이징, 패드 포커스 등 다양한 UI 예외 상황을 검증한다."
+    },
+    {
+      "source": "artist-2d-3d",
+      "target": "technical-artist",
+      "type": "파이프라인",
+      "label": "에셋 제작·검증",
+      "weight": 3,
+      "reason": "아티스트의 제작 결과가 엔진 규칙과 성능 예산을 만족하도록 파이프라인을 맞춘다."
+    },
+    {
+      "source": "artist-2d-3d",
+      "target": "animator-rigger",
+      "type": "콘텐츠 전달",
+      "label": "캐릭터 모델 ↔ Rig",
+      "weight": 3,
+      "reason": "캐릭터 Topology와 스켈레톤 구조가 Skinning과 애니메이션 제작에 영향을 준다."
+    },
+    {
+      "source": "artist-2d-3d",
+      "target": "level-designer",
+      "type": "콘텐츠 전달",
+      "label": "환경 아트 적용",
+      "weight": 3,
+      "reason": "레벨 Blockout을 실제 환경 자산과 장식 요소로 발전시킨다."
+    },
+    {
+      "source": "animator-rigger",
+      "target": "combat-designer",
+      "type": "전투 협업",
+      "label": "타이밍·판정 조율",
+      "weight": 3,
+      "reason": "공격 모션의 타이밍과 판정 구간이 전투 체감에 직접 영향을 준다."
+    },
+    {
+      "source": "animator-rigger",
+      "target": "technical-artist",
+      "type": "파이프라인",
+      "label": "Rig/Animation Pipeline",
+      "weight": 2,
+      "reason": "리깅·리타깃·Export의 반복 작업과 기술 문제를 함께 해결한다."
+    },
+    {
+      "source": "technical-artist",
+      "target": "vfx-artist",
+      "type": "기술 아트",
+      "label": "셰이더·VFX 지원",
+      "weight": 3,
+      "reason": "VFX에 필요한 셰이더, 머티리얼, 파이프라인과 성능 문제를 공유한다."
+    },
+    {
+      "source": "game-designer",
+      "target": "balance-designer",
+      "type": "설계 협업",
+      "label": "시스템 ↔ 수치",
+      "weight": 3,
+      "reason": "시스템 규칙을 실제 성장·보상·경제 수치 체계로 구체화한다."
+    },
+    {
+      "source": "game-designer",
+      "target": "narrative-designer-writer",
+      "type": "설계 협업",
+      "label": "시스템 ↔ 서사",
+      "weight": 2,
+      "reason": "퀘스트, 선택, 보상 등 게임 시스템과 이야기 구조를 연결한다."
+    },
+    {
+      "source": "game-designer",
+      "target": "producer-pm",
+      "type": "기획 관리",
+      "label": "범위·우선순위",
+      "weight": 2,
+      "reason": "시스템 요구사항의 범위와 개발 우선순위를 일정과 자원에 맞춰 조정한다."
+    },
+    {
+      "source": "combat-designer",
+      "target": "balance-designer",
+      "type": "설계 협업",
+      "label": "전투 수치 튜닝",
+      "weight": 3,
+      "reason": "공격력, 체력, 쿨다운, TTK 등 전투 체감을 수치로 조정한다."
+    },
+    {
+      "source": "combat-designer",
+      "target": "vfx-artist",
+      "type": "콘텐츠 협업",
+      "label": "타격 피드백",
+      "weight": 2,
+      "reason": "스킬과 공격의 타이밍을 VFX 표현과 맞춰 가독성과 타격감을 만든다."
+    },
+    {
+      "source": "combat-designer",
+      "target": "sound-designer",
+      "type": "콘텐츠 협업",
+      "label": "타격 사운드",
+      "weight": 2,
+      "reason": "공격·피격 타이밍에 맞는 오디오 피드백으로 전투 감각을 강화한다."
+    },
+    {
+      "source": "level-designer",
+      "target": "narrative-designer-writer",
+      "type": "콘텐츠 협업",
+      "label": "공간 서사",
+      "weight": 2,
+      "reason": "퀘스트, 이벤트, 환경 정보가 레벨의 공간 흐름과 자연스럽게 연결되도록 한다."
+    },
+    {
+      "source": "level-designer",
+      "target": "qa-engineer",
+      "type": "검증",
+      "label": "진행/막힘 검증",
+      "weight": 2,
+      "reason": "진행 불가, 충돌, 소프트락, 배치 오류 등을 레벨 단위로 검증한다."
+    },
+    {
+      "source": "balance-designer",
+      "target": "backend-server-programmer",
+      "type": "데이터 연동",
+      "label": "경제/랭킹 데이터",
+      "weight": 2,
+      "reason": "온라인 경제와 랭킹 수치가 서버 데이터 구조와 운영 규칙에 맞게 저장·적용된다."
+    },
+    {
+      "source": "narrative-designer-writer",
+      "target": "ui-programmer",
+      "type": "콘텐츠 연동",
+      "label": "대사/퀘스트 UI",
+      "weight": 2,
+      "reason": "대사, 퀘스트 목표, 선택지가 UI를 통해 정확히 표현되도록 연동한다."
+    },
+    {
+      "source": "sound-designer",
+      "target": "game-composer",
+      "type": "오디오 협업",
+      "label": "믹스·전환",
+      "weight": 2,
+      "reason": "효과음과 음악이 주파수·볼륨·전환 측면에서 충돌하지 않도록 조율한다."
+    },
+    {
+      "source": "sound-designer",
+      "target": "gameplay-programmer",
+      "type": "콘텐츠 연동",
+      "label": "이벤트 오디오",
+      "weight": 2,
+      "reason": "게임 이벤트와 오디오 이벤트의 Trigger 조건을 함께 정의한다."
+    },
+    {
+      "source": "qa-engineer",
+      "target": "build-devops-engineer",
+      "type": "자동화",
+      "label": "빌드·테스트 파이프라인",
+      "weight": 3,
+      "reason": "새 빌드마다 자동 테스트와 회귀 검증이 실행되도록 파이프라인을 연결한다."
+    },
+    {
+      "source": "qa-engineer",
+      "target": "producer-pm",
+      "type": "품질 관리",
+      "label": "출시 기준·리스크",
+      "weight": 2,
+      "reason": "버그 상태와 품질 리스크를 일정·출시 의사결정에 전달한다."
+    },
+    {
+      "source": "producer-pm",
+      "target": "build-devops-engineer",
+      "type": "릴리스 관리",
+      "label": "릴리스 일정",
+      "weight": 2,
+      "reason": "빌드·배포 일정과 마일스톤, 배포 승인 흐름을 조율한다."
+    },
+    {
+      "source": "build-devops-engineer",
+      "target": "backend-server-programmer",
+      "type": "인프라",
+      "label": "서버 배포·운영",
+      "weight": 3,
+      "reason": "백엔드 서비스를 빌드·배포하고 개발/운영 환경을 자동화한다."
+    },
+    {
+      "source": "backend-server-programmer",
+      "target": "qa-engineer",
+      "type": "검증",
+      "label": "API/데이터 테스트",
+      "weight": 2,
+      "reason": "계정, 저장, 상점, 랭킹 등 서버 기능의 데이터 정합성과 예외 상황을 검증한다."
+    }
+  ]
+}
